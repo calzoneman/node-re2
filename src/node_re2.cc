@@ -14,7 +14,7 @@ static Persistent<FunctionTemplate> constructor;
 
 RE2Wrap::RE2Wrap(std::string& regexp, const RE2::Options& options)
 {
-    this->m_Regexp = regexp;
+    this->m_Source = regexp;
     this->m_RE2 = new RE2(regexp, options);
 }
 
@@ -103,7 +103,7 @@ NAN_GETTER(RE2Wrap::GetSource)
 {
     NanScope();
     RE2Wrap *wrap = ObjectWrap::Unwrap<RE2Wrap>(args.This());
-    NanReturnValue(NanNew<String>(wrap->m_Regexp));
+    NanReturnValue(NanNew<String>(wrap->m_Source));
 }
 
 /*
@@ -116,7 +116,7 @@ void RE2Wrap::Init()
     Local<FunctionTemplate> tpl = NanNew<FunctionTemplate>(RE2Wrap::New);
     NanAssignPersistent(constructor, tpl);
     tpl->SetClassName(NanNew<String>("RE2"));
-    tpl->InstanceTemplate()->SetInternalFieldCount(2); // m_RE2, m_Regexp
+    tpl->InstanceTemplate()->SetInternalFieldCount(2); // m_RE2, m_Source
 
     /* instance methods */
     tpl->InstanceTemplate()->Set(NanNew<String>("replace"),

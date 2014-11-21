@@ -20,7 +20,7 @@ class RE2Wrap : public node::ObjectWrap {
         static NAN_GETTER(GetSource);
 
         RE2 *m_RE2;
-        std::string m_Regexp;
+        std::string m_Source;
 };
 
 #endif
