@@ -7,7 +7,8 @@ node-re2 is a node.js binding for Google's [re2](https://code.google.com/p/re2/)
 
 From the Project Home page for re2:
 
->Backtracking engines are typically full of features and convenient syntactic sugar but can be forced into taking exponential amounts of time on even small inputs. RE2 uses automata theory to guarantee that regular expression searches run in time linear in the size of the input. RE2 implements memory limits, so that searches can be constrained to a fixed amount of memory.
+>Backtracking engines are typically full of features and convenient syntactic sugar but can be forced into taking exponential amounts of time on even small inputs. RE2 uses automata theory to guarantee that regular expression searches run in time linear in the size of the input. RE2 implements memory limits, so that searches can be constrained to a fixed amount of memory...
+
 >On large inputs, RE2 is often much faster than backtracking engines; its use of automata theory lets it apply optimizations that the others cannot.
 
 
@@ -25,7 +26,8 @@ The code for this binding is copyright 2014 Calvin Montgomery.  It is released u
 
 RE2 is released under the BSD 3-clause license:
 
->// Copyright (c) 2009 The RE2 Authors. All rights reserved.
+```
+// Copyright (c) 2009 The RE2 Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -52,3 +54,4 @@ RE2 is released under the BSD 3-clause license:
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
