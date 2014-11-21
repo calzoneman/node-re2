@@ -41,9 +41,18 @@ NAN_METHOD(RE2Wrap::New)
 
     /* TODO allow JS to pass in options */
     RE2::Options options;
+    /* Don't log errors to the console from C++-land,
+     * instead it will be thrown as a JS Error below
+     */
+    options.set_log_errors(false);
     std::string regexp(*String::Utf8Value(args[0]->ToString()));
     RE2Wrap *wrap = new RE2Wrap(regexp, options);
     wrap->Wrap(args.This());
+
+    if (!wrap->m_RE2->ok())
+    {
+        return NanThrowError(NanNew<String>(wrap->m_RE2->error()));
+    }
 
     NanReturnThis();
 }
