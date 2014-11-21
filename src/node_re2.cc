@@ -1,7 +1,7 @@
 #include <node.h>
 #include <nan.h>
 #include <re2/re2.h>
-#include "./addon.h"
+#include "./node_re2.h"
 
 using v8::String;
 using v8::FunctionTemplate;
@@ -136,4 +136,4 @@ void Init(Handle<Object> exports, Handle<Object> module)
     module->Set(NanNew<String>("exports"), constructorHandle->GetFunction());
 }
 
-NODE_MODULE(addon, Init);
+NODE_MODULE(re2, Init);

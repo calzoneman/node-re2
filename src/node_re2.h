@@ -1,5 +1,5 @@
-#ifndef _ADDON_H
-#define _ADDON_H
+#ifndef _NODE_RE2_H
+#define _NODE_RE2_H
 
 #include <node.h>
 #include <nan.h>

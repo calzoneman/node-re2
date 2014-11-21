@@ -1,14 +1,19 @@
 {
-    "author": "Calvin Montgomery",
-    "name": "re2",
-    "description": "Node.js binding for the re2 regular expression library",
-    "version": "0.0.0",
-    "repository": {
-        "url": "https://github.com/calzoneman/node-re2"
-    },
-    "main": "test.js",
-    "gypfile": true,
-    "dependencies": {
-        "nan": "*"
-    }
+  "author": "Calvin Montgomery",
+  "name": "re2",
+  "description": "Node.js binding for the re2 regular expression library",
+  "version": "0.0.0",
+  "repository": {
+    "url": "https://github.com/calzoneman/node-re2"
+  },
+  "gypfile": true,
+  "dependencies": {
+    "nan": "*"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  },
+  "scripts": {
+      "test": "mocha"
+  }
 }
